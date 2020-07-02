@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, FormEvent } from 'react';
 import { FiChevronRight } from 'react-icons/fi'
 import api from '../../services/api';
 
@@ -6,8 +6,10 @@ import logoMackenzie from '../../assets/LogoComNomePequeno.png'
 import { Title, Form, Repositories } from './styles';
 
 const Dashboard: React.FC = () => {
-    const [professor, setProfessor] = useState([]);
-    
+
+    const professor = api.get('/');
+
+    console.log(professor);
 
     return (
         <>
