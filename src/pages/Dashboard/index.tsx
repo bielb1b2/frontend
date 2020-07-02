@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiChevronRight } from 'react-icons/fi'
+import api from '../../services/api';
 
 import logoMackenzie from '../../assets/LogoComNomePequeno.png'
 import { Title, Form, Repositories } from './styles';
 
 const Dashboard: React.FC = () => {
+    const [professor, setProfessor] = useState([]);
+    
+
     return (
         <>
             <img src={logoMackenzie} alt="mackenzie" />
